@@ -1,11 +1,9 @@
-namespace Game.Objects.Buildings;
+namespace Game.Objects;
 using Game.Interfaces;
-using Game.Objects.Units;
-
-public class Fort : Building, IAttacker
+public class Archer : Unit, IAttacker, IMoveable
 {
     private float _damage;
-    public Fort(int id, string name, int x, int y, float damage, bool isBuilt = false) : base(id, name, x, y, isBuilt)
+    public Archer(int id, string name, int x, int y, float hp, float damage) : base(id, name, x, y, hp)
     {
         if (damage < 0)
             throw new ArgumentOutOfRangeException(nameof(damage), "Damage value must not be negative");
@@ -16,7 +14,13 @@ public class Fort : Building, IAttacker
     {
         if (unit is null)
             throw new ArgumentNullException(nameof(unit));
-        if (!IsBuilt()) return;
+        if (!IsAlive()) return;
         unit.ReceiveDamage(_damage);
+    }
+    public void Move(int x, int y)
+    {
+        if (!IsAlive()) return;
+
+        SetPosition(x, y);
     }
 }

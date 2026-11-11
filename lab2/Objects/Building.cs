@@ -1,4 +1,4 @@
-namespace Game.Objects.Buildings;
+namespace Game.Objects;
 public class Building : GameObject
 {
     private bool _isBuilt;

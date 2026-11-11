@@ -1,6 +1,4 @@
 using Game.Objects;
-using Game.Objects.Units;
-using Game.Objects.Buildings;
 //var testUnit = new Unit(-1,"",1,0, -2);
 var arch1 = new Archer(id: 1, name: "arch1", x: 0, y: 0, hp: 100f, damage: 25f);
 var arch2 = new Archer(id: 2, name: "arch2", x: 8, y: 8, hp: 30f, damage: 10f);

@@ -1,4 +1,4 @@
-namespace Game.Objects.Buildings;
+namespace Game.Objects;
 using Game.Interfaces;
 public class MobileHome : Building, IMoveable
 {

@@ -1,4 +1,4 @@
-namespace Game.Objects.Units;
+namespace Game.Objects;
 public class Unit : GameObject
 {
     private float _hp;
